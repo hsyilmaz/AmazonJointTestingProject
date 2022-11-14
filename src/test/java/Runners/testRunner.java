@@ -7,17 +7,16 @@ import io.cucumber.testng.CucumberOptions;
 import org.testng.annotations.AfterClass;
 import org.testng.annotations.Listeners;
 
-public class testRunner extends AbstractTestNGCucumberTests {
-
 
     @CucumberOptions(
             tags = "@Nurhayat",
             features = {"src/test/java/FeatureFiles"},
-            glue = {"StepDefinitions"}
+            glue = {"StepDefinitions"},
+            plugin= {"pretty","html:target/site/cucumber-pretty","json:target/cucumber/cucumber.json"}
     )
 
     @Listeners({ExtentITestListenerClassAdapter.class})
-    public class ExtentReports extends AbstractTestNGCucumberTests {
+    public class testRunner extends AbstractTestNGCucumberTests {
         @AfterClass
         public static void writeExtentReport() {
             ExtentService.getInstance().setSystemInfo("User Name", "Nurhayat");
@@ -30,4 +29,3 @@ public class testRunner extends AbstractTestNGCucumberTests {
 
 
     }
-}

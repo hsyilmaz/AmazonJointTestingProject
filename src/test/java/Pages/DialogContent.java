@@ -44,8 +44,9 @@ public class DialogContent extends Parent {
     @FindBy(xpath = "//span[text()='Home Office Desk Chairs']")
     private WebElement deskChairs;
 
-    @FindBy(css = "div>div>div[cel_widget_id='MAIN-SEARCH_RESULTS-2'] h2 span")
+    @FindBy(css = "div>img[alt='Home Office Chair Executive High Back Ergonomic Desk Chair Height Adjustable Managerial Rolling Swivel Chair with Adjustab...']")
     private WebElement executiveChair;
+    //div>div>div[cel_widget_id='MAIN-SEARCH_RESULTS-3'] h2 span
 
     @FindBy(css = "input[id='add-to-cart-button']")
     private WebElement addToCart;
@@ -201,15 +202,6 @@ public class DialogContent extends Parent {
 
 
 
-
-
-
-
-
-
-
-
-
     WebElement myElement;
 
     public void findAndSend(String strElement, String value) {
@@ -332,47 +324,47 @@ public class DialogContent extends Parent {
                 myElement = deleteCartButton;
                 break;
 
-case "leftMune1":
+            case "leftMune1":
                 myElement = leftMune1;
                 break;
 
-case "leftMune2":
+            case "leftMune2":
                 myElement = leftMune2;
                 break;
 
-case "leftMune3":
+            case "leftMune3":
                 myElement = leftMune3;
                 break;
 
-case "leftMune4":
+            case "leftMune4":
                 myElement = leftMune4;
                 break;
 
-case "leftMune5":
+            case "leftMune5":
                 myElement = leftMune5;
                 break;
 
-case "leftMune6":
+            case "leftMune6":
                 myElement = leftMune6;
                 break;
 
-case "leftMune7":
+            case "leftMune7":
                 myElement = leftMune7;
                 break;
 
-case "leftMune8":
+            case "leftMune8":
                 myElement = leftMune8;
                 break;
 
-case "leftMune9":
+            case "leftMune9":
                 myElement = leftMune9;
                 break;
 
-case "leftMune10":
+            case "leftMune10":
                 myElement = leftMune10;
                 break;
 
-case "leftMune11":
+            case "leftMune11":
                 myElement = leftMune11;
                 break;
 
@@ -408,7 +400,7 @@ case "leftMune11":
                 myElement = AddToCartverify;
                 break;
 
-case "information":
+            case "information":
                 myElement = information;
                 break;
 
@@ -417,7 +409,6 @@ case "information":
         }
         verifyContainsText(myElement, text);
     }
-
     public void findAndSelect(String strElement, String value) {
 
         switch (strElement) {
@@ -428,7 +419,7 @@ case "information":
                 myElement = miniSelectMenu;
                 break;
         }
-        selectAndFind(allSelectMenu, value);
+        selectAndFind(myElement, value);
     }
 
     public void findAndAction(String strElement) {

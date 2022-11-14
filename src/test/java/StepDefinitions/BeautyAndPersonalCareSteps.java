@@ -37,10 +37,10 @@ public class BeautyAndPersonalCareSteps {
 
     @And("Sort from most expensive to least expensive")
     public void sortFromMostExpensiveToLeastExpensive() {
-//        dc.findAndSelect("miniSelectMenu","Price: High to Low");
-        WebElement menu= GWD.getDriver().findElement(By.id("s-result-sort-select"));
-        Select ddmenu=new Select(menu);
-        ddmenu.selectByIndex(2);
+        dc.findAndSelect("miniSelectMenu","Price: High to Low");
+//        WebElement menu= GWD.getDriver().findElement(By.id("s-result-sort-select"));
+//        Select ddmenu=new Select(menu);
+//        ddmenu.selectByIndex(2);
     }
 
     @And("Choose shopping filters")
